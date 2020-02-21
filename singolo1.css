@@ -69,6 +69,10 @@
   text-transform: uppercase;
 }
 
+.navbar ul li a:hover{
+    color: #f06c64;
+}
+
 .navbar {
   width: 370px;
 }
@@ -77,30 +81,101 @@
   height: 594px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
+  display: flex;
 }
 
-.ivert {
+.phones {
+  height: 592px;
+  width: 796px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iphone_hor {
+  padding-bottom: 1px;
+  padding-left: 73px;
+}
+
+.back {
+  width: 112px;
+  height: 592px;
+  background: #666d89;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-right: 50px; */
+  /* padding-bottom: 3px; */
+}
+
+.back_img {
+  padding-right: 11px;
+  padding-bottom: 3px;
+}
+
+.forward {
+  height: 592px;
+  width: 112px;
+  background: #666d89;
+  order: 3;
+}
+
+/* .ivert {
   position: relative;
   top: 53px;
-  left: 112px;
+  left: 112px; */
 }
 
-.ihor {
+/* .ihor {
   position: relative;
   top: -69px;
   left: 181px;
-}
+} */
+
+
 
 .back_button {
   position: relative;
   top: -175px;
   left: -690px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  
+}
+
+.back_button:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+
 }
 
 .forward_button {
   position: relative;
   top: -177px;
   left: 212px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.forward_button:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+
 }
 
 .footer {
@@ -117,7 +192,10 @@
   font-family: "Lato";
   font-weight: 900;
   text-align: left;
-  margin: 68px 0 0 39px;
+  /* margin: 68px 0 0 39px; */
+  position: relative;
+  top: 68px;
+  left: 39px;
   letter-spacing: 0.1px;
 }
 
@@ -129,6 +207,9 @@
   font-family: "Lato";
   font-weight: 300;
   text-align: left;
-  margin: 28px 0 0 39px;
+  position: relative;
+  top: 95px;
+  left: 39px;
+  padding-right: 40px;
   
 }
