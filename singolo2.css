@@ -36,6 +36,15 @@
     background: #2d303a;
     height: 864px;
     border-bottom: 6px solid #323746;
+   
+}
+
+.port_block {
+    height: 729px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 68px 0 0 40px;
 }
 
 .heading {
@@ -45,21 +54,23 @@
     font-family: "Lato Black";
     text-align: left;
     text-transform: capitalize;
+    margin-top: 1px;
 }
 
-.wrapper p {
+.port_block  p {
     width: 940px;
-    height: 57px;
+    /* height: 57px; */
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
     font-family: "Lato Light";
     text-align: left;
+    margin-top: 17px;
 }
 
 .navbar ul li a{
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #767e9e;
     font-family: "Lato Regular";
     text-align: left;
@@ -85,5 +96,60 @@
 
 .navbar {
     width: 300px;
+    margin-bottom: 9px;
 }
 
+
+.photo {
+    width: 940px;
+    height: 601px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.photo div {
+    width: 220px;
+    height: 187px;
+    background-color: #464b5e;
+}
+
+.about_us {
+    height: 734px;
+    background: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+}
+
+.about_block {
+    width: 940px;
+    height: 594px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 67px 0 0 40px;
+}
+
+.about_block p {
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato Light";
+    
+    text-align: left;
+}
+
+.team {
+    height: 443px;
+    background: #464b5e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team_photo {
+    width: 300px;
+    height: 300px;
+}
