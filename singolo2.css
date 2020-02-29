@@ -144,12 +144,45 @@
 
 .team {
     height: 443px;
-    background: #464b5e;
+    
     display: flex;
     justify-content: space-between;
 }
 
 .team_photo {
     width: 300px;
-    height: 300px;
+    /* height: 300px; */
+    height: 443px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team_photo h1 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Black";
+    text-transform: capitalize;
+    text-align: left;
+    margin-top: 11px;
+}
+
+.team_photo p {
+    width: 300px;
+    
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato Regular";
+    
+    text-align: justify;
+    letter-spacing: 0.01px;
+}
+
+.social_media {
+    width: 153px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: px;
 }
