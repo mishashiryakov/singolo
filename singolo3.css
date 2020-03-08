@@ -40,6 +40,8 @@
     justify-content: center;
 }
 
+
+
 .form_block {
     height: 515px;
     width: 940px;
@@ -59,8 +61,6 @@
 }
 
 .p_form {
-    /* width: 940px; */
-    /* height: 57px; */
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
@@ -74,7 +74,6 @@
     width: 940px;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .fields {
@@ -82,20 +81,8 @@
     height: 364px;
 }
 
-form {
-   
-}
-
-
-.info_form {
-    
-
-}
-
-
 .info_form input::-webkit-input-placeholder {
     color: #f48c8f;
-
 }
 
 .info_form input::-ms-input-placeholder {
@@ -104,7 +91,6 @@ form {
 
 .info_form textarea::-webkit-input-placeholder {
     color: #f48c8f;
-
 }
 
 .info_form textarea::-ms-input-placeholder {
@@ -128,6 +114,8 @@ form {
     border-radius: 5px;   
     border: none; 
 }
+
+
 
 .info_form textarea {
     min-width: 589px;
@@ -183,8 +171,10 @@ form {
     line-height: 22px;
     color: #f0d8d9;
     font-family: "Lato Regular";
-    
     text-align: justify;
+    margin-bottom: 12px;
+    word-spacing: -1.6px;
+    word-wrap: break-word;
 }
 
 .contacts {
@@ -199,14 +189,42 @@ form {
     align-items: center;
 }
 
-.p_contacts {
+#location {
+    margin: 0 0 0 3px;
+}
+
+#phone {
+    margin: 2px 0 0 1px;
+}
+
+#mail {
+    margin: 2px 0 0 0;
+}
+
+.p_contacts_1 {
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f0d8d9;
     font-family: "Lato Regular";
-    
-    /* text-align: left; */
-    margin-left: 15px;
+    margin-left: 13px;
+}
+
+.a_contacts_2 {
+    font-size: 12px;
+    line-height: 21px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    margin-left: 11px;
+    text-decoration: none;
+}
+
+.a_contacts_3 {
+    font-size: 12px;
+    line-height: 23px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 .last_footer {
@@ -238,4 +256,24 @@ form {
     display: flex;
     justify-content: space-between;
     margin-top: 3px;
+}
+
+.footer_social div:nth-child(1) img:hover {
+    content: url(./assets/images/facebook\ hover.png);
+    cursor: pointer;
+}
+
+.footer_social div:nth-child(2) img:hover {
+    content: url(./assets/images/google\ hover.png);
+    cursor: pointer;
+}
+
+.footer_social div:nth-child(3) img:hover {
+    content: url(./assets/images/twitter\ hover.png);
+    cursor: pointer;
+}
+
+.footer_social div:nth-child(4) img:hover {
+    content: url(./assets/images/linkedin\ hover.png);
+    cursor: pointer;
 }

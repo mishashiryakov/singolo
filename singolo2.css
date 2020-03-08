@@ -183,7 +183,7 @@
     font-family: "Lato Black";
     text-transform: capitalize;
     text-align: left;
-    margin-top: 11px;
+    margin-top: 8px;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -202,6 +202,9 @@
     width: 153px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: 3px;
+    left: 1px;
 }
 
 .social_media div:nth-child(1) img:hover {
