@@ -68,13 +68,13 @@
     margin-top: 17px;
 }
 
-.navbar ul li .a_selected {
+.navbar_2 ul li .a_selected {
     color: #dedede;
     border: 1px solid #dedede;
     
 }
 
-.navbar ul li a{
+.navbar_2 ul li a{
     font-size: 12px;
     line-height: 20px;
     color: #767e9e;
@@ -94,20 +94,20 @@
     border: 1px solid #666d89;
 }
 
-.navbar ul li a:hover {
+.navbar_2 ul li a:hover {
     color: #dedede;
     border: 1px solid #dedede;
 }
 
 
 
-.navbar ul {
+.navbar_2 ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.navbar {
+.navbar_2 {
     width: 300px;
     margin-bottom: 9px;
 }
@@ -154,7 +154,7 @@
     line-height: 30px;
     color: #767e9e;
     font-family: "Lato Light";
-    text-align: left;
+    text-align: justify;
     padding-bottom: 21px;
 }
 
