@@ -1,26 +1,26 @@
 @font-face {
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     font-style: normal;
     font-weight: normal;
     src: url(./assets/Lato-Regular.ttf) format('truetype');       
   }
 
   @font-face {
-    font-family: "Lato Bold";
+    font-family: 'Lato Bold';
     font-style: normal;
     font-weight: normal;
     src: url(./assets/Lato-Bold.ttf) format('truetype');       
   }
 
   @font-face {
-    font-family: "Lato Black";
+    font-family: 'Lato Black';
     font-style: normal;
     font-weight: normal;
     src: url(./assets/Lato-Black.ttf) format('truetype');       
   }
 
   @font-face {
-    font-family: "Lato Light";
+    font-family: 'Lato Light';
     font-style: normal;
     font-weight: normal;
     src: url(./assets/Lato-Light.ttf) format('truetype');       
@@ -50,7 +50,7 @@
   font-size: 25px;
   line-height: 6px;
   color: #ffffff;
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   text-align: left;
   padding-right: 373px;
   padding-bottom: 1px;
@@ -71,7 +71,7 @@
   color: #ffffff;
   font-size: 12px;
   line-height: 6px;
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   text-align: left;
   text-transform: uppercase;
 }
@@ -84,7 +84,7 @@
   color: #494e62;
   font-size: 12px;
   line-height: 15px;
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   text-align: left;
 }
 
@@ -197,7 +197,7 @@ footer {
   font-size: 30px;
   line-height: 18px;
   color: #666d89;
-  font-family: "Lato Black";
+  font-family: 'Lato Black';
   text-align: left;
   letter-spacing: 0.1px;
   margin-bottom: 7px;
@@ -208,7 +208,7 @@ footer {
   font-size: 18px;
   line-height: 30px;
   color: #767e9e;
-  font-family: "Lato Light";
+  font-family: 'Lato Light';
   text-align: justify;
   /* margin-top: 5px; */
 }
@@ -251,7 +251,7 @@ footer {
   font-size: 18px;
   line-height: 18px;
   color: #666d89;
-  font-family: "Lato Black";
+  font-family: 'Lato Black';
   text-transform: capitalize;
   text-align: left;
   margin-bottom: 10px;
@@ -301,7 +301,7 @@ footer {
   font-size: 12px;
   line-height: 22px;
   color: #767e9e;
-  font-family: "Lato Regular";
+  font-family: 'Lato Regular';
   text-align: justify;
   overflow: hidden;
   width: 219px;
@@ -326,7 +326,7 @@ footer {
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black";
+    font-family: 'Lato Black';
     text-align: left;
     text-transform: capitalize;
     margin-top: 1px;
@@ -338,7 +338,7 @@ footer {
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
-    font-family: "Lato Light";
+    font-family: 'Lato Light';
     text-align: left;
     margin-top: 17px;
 }
@@ -353,7 +353,7 @@ footer {
     font-size: 12px;
     line-height: 20px;
     color: #767e9e;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     text-align: left;
     text-decoration: none;
     text-transform: capitalize;
@@ -430,7 +430,7 @@ footer {
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
-    font-family: "Lato Light";
+    font-family: 'Lato Light';
     text-align: justify;
     padding-bottom: 21px;
 }
@@ -457,7 +457,7 @@ footer {
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black";
+    font-family: 'Lato Black';
     text-transform: capitalize;
     text-align: left;
     margin-top: 8px;
@@ -470,7 +470,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     text-align: justify;
     padding-bottom: 10px;
 }
@@ -529,7 +529,7 @@ footer {
     font-size: 30px;
     line-height: 18px;
     color: #f0d8d9;
-    font-family: "Lato Black";
+    font-family: 'Lato Black';
     text-align: left;
 }
 
@@ -537,7 +537,7 @@ footer {
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
-    font-family: "Lato Light";
+    font-family: 'Lato Light';
     text-align: justify;
     padding-bottom: 17px;
 }
@@ -579,7 +579,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     
     text-align: left;
 
@@ -599,7 +599,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
 
     background-color: #d6564f;
     border-radius: 5px;
@@ -612,7 +612,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     
     text-align: left;
 
@@ -634,7 +634,7 @@ footer {
     font-size: 18px;
     line-height: 18px;
     color: #f0d8d9;
-    font-family: "Lato Black";
+    font-family: 'Lato Black';
     text-transform: capitalize;
     text-align: left;
 }
@@ -643,7 +643,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     text-align: justify;
     margin-bottom: 12px;
     word-spacing: -1.6px;
@@ -678,7 +678,7 @@ footer {
     font-size: 12px;
     line-height: 20px;
     color: #f0d8d9;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     margin-left: 13px;
 }
 
@@ -686,7 +686,7 @@ footer {
     font-size: 12px;
     line-height: 21px;
     color: #f0d8d9;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     margin-left: 11px;
     text-decoration: none;
 }
@@ -695,7 +695,7 @@ footer {
     font-size: 12px;
     line-height: 23px;
     color: #f0d8d9;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
     margin-left: 10px;
     text-decoration: none;
 }
@@ -721,7 +721,7 @@ footer {
     font-size: 12px;
     line-height: 22px;
     color: #666d89;
-    font-family: "Lato Regular";
+    font-family: 'Lato Regular';
 }
 
 .footer_social {
