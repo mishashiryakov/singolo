@@ -8,61 +8,69 @@
     <title>Singolo</title>
 </head>
 <body>
+    
    <div class="wrapper">
-       <header class="header">
+       <header  class="header">
            
            <h1 class="logo">singolo<span class="red">*</span></h1>
            <nav class="navbar">
-                <ul>
+                <ul id="menu">
                     <li>
-                        <a href="#" class="selected">home</a>
+                        <a href="#home" class="selected">home</a>
                     </li>
                     <li class="dot">
                         ·
                     </li>
                     <li>
-                        <a href="#">services</a>
+                        <a href="#services">services</a>
                     </li>
                     <li class="dot">
                         ·
                     </li>
                     <li>
-                        <a href="#">portfolio</a>
+                        <a href="#portfolio">portfolio</a>
                     </li>
                     <li class="dot">
                         ·
                     </li>
                     <li>
-                        <a href="#">about</a>
+                        <a href="#about">about</a>
                     </li>
                     <li class="dot">
                         ·
                     </li>
                     <li>
-                        <a href="#">contact</a>
+                        <a href="#contact">contact</a>
                     </li>
                </ul>
            </nav>
         </header>
-        <main class="slider">
+        <main id="home" class="slider">
             <div class="back">
-                <a href="#"> <img class="back_btn" src="./assets/images/back.png" alt="back button"></a>
+                <img class="back_btn" src="./assets/images/back.png" alt="back button">
             </div>
             <div class="forward">
-                <a href="#"> <img class="forward_btn" src="./assets/images/forward.png" alt="forward button"></a>
+                 <img class="forward_btn" src="./assets/images/forward.png" alt="forward button">
             </div>
-            <div class="phones">
-                <div>
-                <img src="./assets/images/ivert.png" alt="Iphone 1" class="iphone_vert">
-                </div>
-                <div>
-                <img src="./assets/images/ihor.png" alt="Iphone 2" class="iphone_hor">
-                </div>
-            </div>        
+
+            <div class="items-container">
+                <div class="background phones item active">
+                    <div>
+                    <img src="./assets/images/ivert.png" alt="Iphone 1" class="iphone_vert">
+                    </div>
+                    <div>
+                    <img src="./assets/images/ihor.png" alt="Iphone 2" class="iphone_hor">
+                    </div>
+                </div> 
+                <div class="item">
+                    <img src="./assets/images/slider.png" alt="blue">
+                </div>       
+            </div>
+            
         </main>
 
         <footer>
-            <div class="footer">
+            <div id="services" class="footer">
                 <h1 class="services">our services</h1>
                 <p class="intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="footer_menu">
@@ -125,7 +133,7 @@
            
         </footer>
 
-        <div class="portfolio">
+        <div id="portfolio" class="portfolio">
             <div class="port_block">
                 <h1 class="heading">portfolio</h1>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -156,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div class="about_us">
+        <div id="about" class="about_us">
             <div class="about_block">
                 <h1 class="heading">about us</h1>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor 
@@ -211,7 +219,7 @@
             </div>
         </div>
 
-        <div class="input">
+        <div id="contact" class="input">
             <div class="form_block"> 
                 <h1>Get a Quote</h1>
                 <p class="p_form">Fusce dapibus, tellus ac cursus commodo, tortor 
@@ -273,5 +281,6 @@
         </footer>
 
    </div>
+   <script src="script.js"></script>
 </body>
 </html>
