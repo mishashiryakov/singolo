@@ -7,15 +7,53 @@
 //     event.target.classList.add('selected');
 // })
 
+//============================Screen on and off
+
+const iphoneVert = document.getElementById('iphone_vert');
+const blackScreenVert = document.getElementById('vert');
+const iphoneHor = document.getElementById('iphone_hor');
+const blackScreenHor = document.getElementById('hor');
+
+iphoneVert.addEventListener('click', (event) => {
+
+	blackScreenVert.classList.contains('on') ?
+		blackScreenVert.classList.remove('on') :
+		blackScreenVert.classList.add('on');
+
+})
+
+blackScreenVert.addEventListener('click', (event) => {
+
+	blackScreenVert.classList.contains('on') ?
+		blackScreenVert.classList.remove('on') :
+		blackScreenVert.classList.add('on');
+
+})
 
 
+iphoneHor.addEventListener('click', (event) => {
+
+	blackScreenHor.classList.contains('on') ?
+		blackScreenHor.classList.remove('on') :
+		blackScreenHor.classList.add('on');
+
+})
+
+blackScreenHor.addEventListener('click', (event) => {
+
+	blackScreenHor.classList.contains('on') ?
+		blackScreenHor.classList.remove('on') :
+		blackScreenHor.classList.add('on');
+
+})
 
 
+//==================slider===========================================
 let items = document.querySelectorAll('.slider .item');
 let currentItem = 0;
 let isEnabled = true;
 
-function changeCurrentItem(n) {   // slider
+function changeCurrentItem(n) {   
 	currentItem = (n + items.length) % items.length;
 }
 
@@ -61,8 +99,10 @@ document.querySelector('.forward').addEventListener('click', function() {
 });
 
 
+//================================скролл и якоря===================
 
-document.addEventListener('scroll', onScroll);    //делаем плавный скрол и якоря 
+
+document.addEventListener('scroll', onScroll);    
 
 function onScroll(event) {
 
@@ -71,7 +111,7 @@ function onScroll(event) {
 	const links = document.querySelectorAll('#menu a');
 	
 	divs.forEach((el) => {
-		console.log(el.offsetTop);
+		
 		if(el.offsetTop <= curPos  && (el.offsetTop + el.offsetHeight) > curPos) {
 			links.forEach((a) => {
 				a.classList.remove('selected');
