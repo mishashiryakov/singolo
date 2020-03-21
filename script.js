@@ -220,13 +220,31 @@ const message_block = document.getElementById('message-block');
 
 
 btn.addEventListener('click', (event) => {
-	event.preventDefault()
-	const user = document.getElementById('username').value.toString();
-	document.getElementById('result').innerText = user;
-	message_block.classList.remove('hidden');
+	let requiredFields = [...document.querySelectorAll("[required]")];
+	
+	let isValid = node => node.checkValidity();
+	
+	if(requiredFields.every(isValid)) {
+		event.preventDefault();
+		const subject = document.getElementById('subject').value.toString();
+		const description = document.getElementById('description').value.toString();
+		
+		subject == '' ?
+		document.getElementById('subj-res').innerText = 'Без темы' :
+		document.getElementById('subj-res').innerText = 'Тема: ' + subject;
+
+		description == '' ?
+		document.getElementById('des-res').innerText = 'Без описания' :
+		document.getElementById('des-res').innerText = 'Описание: ' + description;
+		
+
+		message_block.classList.remove('hidden');
+	}
 });
 
 close_btn.addEventListener('click', () => {
-	document.getElementById('result').innerText = '';
+	event.preventDefault();
+	document.getElementById('subject').innerText = '';
 	message_block.classList.add('hidden');
+	document.getElementById('form').reset();
 });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <title>Singolo</title>
 </head>
 <body>
@@ -233,19 +234,25 @@
                     tortor mauris condimentum nibh.</p>
                 <div class="form">
                     <div class="fields">
-                        <form class="info_form" method="POST" name="user_data">
+                        <form class="info_form" method="POST" name="user_data" id="form">
                             <fieldset>
                                 <input id="username" type="text" name="username" placeholder="Name (Required)" required>
                                 <input type="email" name="email" placeholder="Email (Required)" required>
-                                <input type="text" name="subject" placeholder="Subject">
-                                <textarea name="description" placeholder="Describe your project in detail..."></textarea>
+                                <input type="text" name="subject" placeholder="Subject" id="subject" maxlength="70">
+                                <textarea name="description" placeholder="Describe your project in detail..." id="description" maxlength="100"></textarea>
                             </fieldset>
                             <button id="submit" type="submit">Submit</button>
                             <div id="message-block" class="hidden">
                                <div id="message">
-                                   <p>Text:span <span id="result"></span> </p>
-                                   <br>
-                                   <button id="close-btn">OK</button>
+                                   <div class="msg">
+                                        <p>Письмо отправлено</p>
+                                        <br>
+                                        <p><span id="subj-res"></span></p>
+                                        <br>
+                                        <p><span id="des-res"></span></p>
+                                        
+                                    </div>
+                                    <button id="close-btn" type="submit">OK</button>
                                </div>
                             </div>
                         </form>
