@@ -1,11 +1,25 @@
 // const MENU = document.getElementById('menu');
 
 
-// MENU.addEventListener('click', (event) => {   //переключение активного класса для нав бара
-//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
+// MENU.addEventListener('click', (event) => { 
 
+	  
+//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
+	
 //     event.target.classList.add('selected');
 // })
+
+
+// document.querySelectorAll('li a')
+//   .forEach(li => 
+//     li.addEventListener('click', () => {
+	
+//       setTimeout(() => {
+//         window.scrollBy(0, -95)
+// 	  }, 1500)
+	
+//     })
+//   )
 
 //============================Screen on and off
 
@@ -112,14 +126,95 @@ function onScroll(event) {
 	
 	divs.forEach((el) => {
 		
-		if(el.offsetTop <= curPos  && (el.offsetTop + el.offsetHeight) > curPos) {
+		if(el.offsetTop <= curPos + 95  && (el.offsetTop + el.offsetHeight) > curPos) {
 			links.forEach((a) => {
 				a.classList.remove('selected');
+				
 				if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
 					a.classList.add('selected');
+					
 				}
+				
 			})
 		}
 	})
 
 }
+
+
+
+//==================сдвиг картинок порфтолио======================
+
+
+const port = document.getElementById('port_li');
+const port2 = document.getElementById('portfolio');
+
+const all = document.getElementById('all');
+const web  = document.getElementById('web');
+const graphic = document.getElementById('graphic');
+const art = document.getElementById('art');
+
+const picture1 = document.getElementById('picture1');
+const picture2 = document.getElementById('picture2');
+const picture3 = document.getElementById('picture3');
+
+port.addEventListener('click', (event) => { 
+	  
+    port.querySelectorAll('li').forEach(el => el.classList.remove('a_selected'));
+	event.target.classList.add('a_selected');
+	
+	if(all.classList.contains('a_selected')) {
+		
+		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'))
+	}	
+
+	if(web.classList.contains('a_selected')) {
+		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'))
+		picture1.classList.add('order');
+
+	}
+
+	if(graphic.classList.contains('a_selected')) {
+		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'));
+		picture1.classList.add('order');
+		picture2.classList.add('order');
+	}
+
+	if(art.classList.contains('a_selected')) {
+		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'));
+		picture1.classList.add('order');
+		picture2.classList.add('order');
+		picture3.classList.add('order');
+	}
+
+})
+
+
+
+//=============================рамка для картинок портфолио========================
+
+
+const addBorder = document.getElementById('photo');
+// const addBorder = document.querySelectorAll('#photo > img');
+console.log(addBorder);
+
+addBorder.addEventListener('click', (event) => {
+
+	// if(event.target.classList.contains('port_border')) {event.target.classList.remove('port_border');}
+	addBorder.querySelectorAll('img').forEach(el => el.classList.remove('port_border'));
+	event.currentTarget.classList.add('port_border');
+	
+} )
+
+
+
+// const MENU = document.getElementById('menu');
+
+
+// MENU.addEventListener('click', (event) => { 
+
+	  
+//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
+	
+//     event.target.classList.add('selected');
+// })
