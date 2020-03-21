@@ -235,12 +235,19 @@
                     <div class="fields">
                         <form class="info_form" method="POST" name="user_data">
                             <fieldset>
-                                <input type="text" name="username" placeholder="Name (Required)" required>
+                                <input id="username" type="text" name="username" placeholder="Name (Required)" required>
                                 <input type="email" name="email" placeholder="Email (Required)" required>
                                 <input type="text" name="subject" placeholder="Subject">
                                 <textarea name="description" placeholder="Describe your project in detail..."></textarea>
                             </fieldset>
-                            <button type="submit">Submit</button>
+                            <button id="submit" type="submit">Submit</button>
+                            <div id="message-block" class="hidden">
+                               <div id="message">
+                                   <p>Text:span <span id="result"></span> </p>
+                                   <br>
+                                   <button id="close-btn">OK</button>
+                               </div>
+                            </div>
                         </form>
                     </div> 
                     <div class="form_contacts">

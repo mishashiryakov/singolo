@@ -195,26 +195,38 @@ port.addEventListener('click', (event) => {
 
 
 const addBorder = document.getElementById('photo');
-// const addBorder = document.querySelectorAll('#photo > img');
-console.log(addBorder);
+
+
 
 addBorder.addEventListener('click', (event) => {
-
-	// if(event.target.classList.contains('port_border')) {event.target.classList.remove('port_border');}
-	addBorder.querySelectorAll('img').forEach(el => el.classList.remove('port_border'));
-	event.currentTarget.classList.add('port_border');
 	
-} )
+	if(!event.target.id) {
+		if(event.target.classList.contains('port_border')) {
+			addBorder.querySelectorAll('img').forEach(el => el.classList.remove('port_border'))
+		} else {
+			addBorder.querySelectorAll('img').forEach(el => el.classList.remove('port_border'));
+			event.target.classList.add('port_border');}
+			}
+})
 
 
 
-// const MENU = document.getElementById('menu');
+
+//================================ Модальное окно===========================
+
+const btn = document.getElementById('submit');
+const close_btn = document.getElementById('close-btn');
+const message_block = document.getElementById('message-block');
 
 
-// MENU.addEventListener('click', (event) => { 
+btn.addEventListener('click', (event) => {
+	event.preventDefault()
+	const user = document.getElementById('username').value.toString();
+	document.getElementById('result').innerText = user;
+	message_block.classList.remove('hidden');
+});
 
-	  
-//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
-	
-//     event.target.classList.add('selected');
-// })
+close_btn.addEventListener('click', () => {
+	document.getElementById('result').innerText = '';
+	message_block.classList.add('hidden');
+});
