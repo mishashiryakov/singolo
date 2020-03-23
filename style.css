@@ -34,9 +34,8 @@ body, html {
 }
 
 .wrapper {
-    width: 1020px;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 1020px;
+  margin: 0 auto;
 }
 
 
@@ -49,15 +48,16 @@ body, html {
 .header {
   background: #2d303a;
   border-bottom: 6px solid #323746;
-  height: 89px;
-  width: 100%;
+  height: 95px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: fixed;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
   width: 1020px;
   z-index: 3;
-  
+  padding: 0 40px 0 40px;
 }
 
 .logo {
@@ -67,7 +67,8 @@ body, html {
   color: #ffffff;
   font-family: 'Lato Bold';
   text-align: left;
-  padding-right: 373px;
+  /* padding-right: 373px;
+   */
   padding-bottom: 1px;
   user-select: none;
   }
@@ -120,7 +121,7 @@ body, html {
   height: 600px;
   width: 1020px;
   position: relative;
-  margin-top: 95px;
+  overflow: hidden;
   /* top: 95px; */
   /* background-color: #f06c64; */
   /* border-bottom: 6px solid #ea676b; */
@@ -965,3 +966,108 @@ body, html {
     content: url(./assets/images/linkedin\ hover.png);
     cursor: pointer;
 }
+
+
+
+
+/* @media only screen and (min-width: 768px) and (max-width: 1020px) {
+
+  .wrapper {
+    width: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .header {
+    width: 768px;
+   
+  }
+
+  .slider {
+    height: 447px;
+  }
+
+  .items-container {
+    height: 447px;
+  }
+
+  .phones {
+    height: 447px;
+  }
+
+  .bluescr {
+    height: 447px;
+  }
+
+  #iphone_vert {
+    height: 363px;
+    left: 95px;
+  }
+
+  #vert {
+    height: 252px;
+    top: 101px;
+    left: 104px;
+  }
+
+  #iphone_hor {
+    height: 180px;
+    bottom: 210px;
+    left: 330px;
+  }
+  
+  #hor {
+    height: 143px;
+    width: 253px;
+    top: 165px;
+    left: 373px;
+  }
+  
+  .back {
+    top: 220px;
+  }
+
+  .forward {
+    right: 280px;
+    top: 220px;
+  }
+
+  .first_footer {
+    height: 675px;
+  }
+
+ .footer {
+   box-sizing: border-box;
+   width: 710px;
+   height: 675px;
+   padding: 49px 0 78px 42px;
+   justify-content: space-between;
+ }
+
+ .marg {
+   margin: 0 0 0 0;
+ }
+
+ .marg_2 {
+   margin: 0 0 0 53px;
+ }
+
+}
+
+
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+  .wrapper {
+    width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .header {
+    width: 375px;
+    
+  }
+
+
+} */

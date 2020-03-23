@@ -63,6 +63,30 @@ blackScreenHor.addEventListener('click', (event) => {
 
 
 //==================slider===========================================
+
+// const {customElements} = window;
+
+// customElements.define('slider-prev-button', 
+// 	class extends HTMLElement {
+// 		constructor() {
+// 			super();
+// 			const
+// 		}
+// 	}
+// );
+
+// class Slider {
+// 	constructor({container, screens}) {
+		
+
+// 		container.append([prevButton, nextButton]);
+// 	}
+// }
+
+// const container = document.querySelector('.slider');
+
+// const slider = new Slider({container, });
+
 let items = document.querySelectorAll('.slider .item');
 let currentItem = 0;
 let isEnabled = true;
@@ -140,8 +164,6 @@ function onScroll(event) {
 	})
 
 }
-
-
 
 //==================сдвиг картинок порфтолио======================
 
