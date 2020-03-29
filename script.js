@@ -1,31 +1,9 @@
-// const MENU = document.getElementById('menu');
 
+//============================Screen on and off===============
 
-// MENU.addEventListener('click', (event) => { 
-
-	  
-//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('selected'));
-	
-//     event.target.classList.add('selected');
-// })
-
-
-// document.querySelectorAll('li a')
-//   .forEach(li => 
-//     li.addEventListener('click', () => {
-	
-//       setTimeout(() => {
-//         window.scrollBy(0, -95)
-// 	  }, 1500)
-	
-//     })
-//   )
-
-//============================Screen on and off
-
-const iphoneVert = document.getElementById('iphone_vert');
+const iphoneVert = document.getElementById('iphone_vert_picture');
 const blackScreenVert = document.getElementById('vert');
-const iphoneHor = document.getElementById('iphone_hor');
+const iphoneHor = document.getElementById('iphone_hor_picture');
 const blackScreenHor = document.getElementById('hor');
 
 iphoneVert.addEventListener('click', (event) => {
@@ -64,32 +42,19 @@ blackScreenHor.addEventListener('click', (event) => {
 
 //==================slider===========================================
 
-// const {customElements} = window;
-
-// customElements.define('slider-prev-button', 
-// 	class extends HTMLElement {
-// 		constructor() {
-// 			super();
-// 			const
-// 		}
-// 	}
-// );
-
-// class Slider {
-// 	constructor({container, screens}) {
-		
-
-// 		container.append([prevButton, nextButton]);
-// 	}
-// }
-
-// const container = document.querySelector('.slider');
-
-// const slider = new Slider({container, });
-
-let items = document.querySelectorAll('.slider .item');
+let items = document.querySelectorAll('.slider-item');
 let currentItem = 0;
 let isEnabled = true;
+const BG_COLOR_MAP = {
+	'phones-red': '#f06c64',
+	'phones-blue': '#648bf0'
+}; 
+
+const BB_COLOR_MAP = {
+	'phones-red': '6px solid #ea676b',
+	'phones-blue': '6px solid #4270e4'
+}; 
+
 
 function changeCurrentItem(n) {   
 	currentItem = (n + items.length) % items.length;
@@ -98,16 +63,34 @@ function changeCurrentItem(n) {
 function hideItem(direction) {
 	isEnabled = false;
 	items[currentItem].classList.add(direction);
-	items[currentItem].addEventListener('animationend', function() {
-		this.classList.remove('active', direction);
-	});
+	items[currentItem].addEventListener('animationend', function hideItemEventListener(event) {
+		
+		event.target.classList.remove('active', direction);
+		event.target.removeEventListener('animationend', hideItemEventListener)
+	  });
 }
+
+
+// var hideItemEventListener = function (direction, event) {
+// 	console.log('hideItemEventListener')
+// 	event.target.classList.remove('active', direction);
+//   };
 
 function showItem(direction) {
 	items[currentItem].classList.add('next', direction);
-	items[currentItem].addEventListener('animationend', function() {
-		this.classList.remove('next', direction);
-		this.classList.add('active');
+	items[currentItem].addEventListener('animationend', function showItemEventListener(event) {
+		// console.log('showItemEventListener');
+		event.target.classList.remove('next', direction);
+
+		event.target.classList.add('active');
+		
+		let contentClassName = this.getElementsByClassName('slider-content')[0].classList[1];
+		// console.log(BG_COLOR_MAP[contentClassName]);
+		document.getElementById('home').style.background = BG_COLOR_MAP[contentClassName];
+		document.getElementById('home').style.borderBottom = BB_COLOR_MAP[contentClassName];
+
+
+		event.target.removeEventListener('animationend', showItemEventListener)
 		isEnabled = true;
 	});
 }
@@ -116,6 +99,7 @@ function nextItem(n) {
 	hideItem('to-left');
 	changeCurrentItem(n + 1);
 	showItem('from-right');
+	// items.forEach(item => item.removeEventListener('animationend', hideItemEventListener))
 }
 
 function previousItem(n) {
@@ -124,13 +108,13 @@ function previousItem(n) {
 	showItem('from-left');
 }
 
-document.querySelector('.back').addEventListener('click', function() {
+document.querySelector('.back_btn').addEventListener('click', function() {
 	if (isEnabled) {
 		previousItem(currentItem);
 	}
 });
 
-document.querySelector('.forward').addEventListener('click', function() {
+document.querySelector('.forward_btn').addEventListener('click', function() {
 	if (isEnabled) {
 		nextItem(currentItem);
 	}
@@ -145,12 +129,12 @@ document.addEventListener('scroll', onScroll);
 function onScroll(event) {
 
 	const curPos = window.scrollY;
-	const divs = document.querySelectorAll('.wrapper>div'); 
+	const divs = document.querySelectorAll('body>div'); 
 	const links = document.querySelectorAll('#menu a');
 	
 	divs.forEach((el) => {
 		
-		if(el.offsetTop <= curPos + 95  && (el.offsetTop + el.offsetHeight) > curPos) {
+		if(el.offsetTop <= curPos + 96  && (el.offsetTop + el.offsetHeight) > curPos) {
 			links.forEach((a) => {
 				a.classList.remove('selected');
 				
@@ -168,55 +152,61 @@ function onScroll(event) {
 //==================сдвиг картинок порфтолио======================
 
 
+const addBorder = document.getElementById('photo');
+
+let PICTURE_LINKS = [['./assets/images/1.jpg','ship'], ['./assets/images/2.jpg', 'smile'], 
+['./assets/images/3.jpg', 'cosmos'], ['./assets/images/4.jpg', 'robot'], 
+['./assets/images/5.jpg', 'animals'], ['./assets/images/6.jpg', 'factory'], 
+['./assets/images/7.jpg', 'camera'], ['./assets/images/8.jpg', 'chiken'], 
+['./assets/images/9.jpg', 'tower'], ['./assets/images/10.jpg', 'text'], 
+['./assets/images/11.jpg', 'red monster'], ['./assets/images/12.jpg', 'note']];
+
+
 const port = document.getElementById('port_li');
-const port2 = document.getElementById('portfolio');
 
-const all = document.getElementById('all');
-const web  = document.getElementById('web');
-const graphic = document.getElementById('graphic');
-const art = document.getElementById('art');
+port.querySelectorAll('li').forEach(el => {
+	el.addEventListener('click', (event) => { 
+	  let isSelected = event.target.classList.contains('a_selected');
 
-const picture1 = document.getElementById('picture1');
-const picture2 = document.getElementById('picture2');
-const picture3 = document.getElementById('picture3');
+	  if(!isSelected){
+		port.querySelectorAll('li').forEach(el => el.classList.remove('a_selected'));
+		event.target.classList.add('a_selected');
 
-port.addEventListener('click', (event) => { 
+		addBorder.innerHTML = '';
+		PICTURE_LINKS.unshift(PICTURE_LINKS.pop());
+		drawImages();
+	  }
+	})
+});
+
+// port.addEventListener('click', (event) => { 
 	  
-    port.querySelectorAll('li').forEach(el => el.classList.remove('a_selected'));
-	event.target.classList.add('a_selected');
-	
-	if(all.classList.contains('a_selected')) {
-		
-		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'))
-	}	
-
-	if(web.classList.contains('a_selected')) {
-		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'))
-		picture1.classList.add('order');
-
-	}
-
-	if(graphic.classList.contains('a_selected')) {
-		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'));
-		picture1.classList.add('order');
-		picture2.classList.add('order');
-	}
-
-	if(art.classList.contains('a_selected')) {
-		port2.querySelectorAll('div').forEach(el => el.classList.remove('order'));
-		picture1.classList.add('order');
-		picture2.classList.add('order');
-		picture3.classList.add('order');
-	}
-
-})
+//     port.querySelectorAll('li').forEach(el => el.classList.remove('a_selected'));
+// 	event.target.classList.add('a_selected');
+// 	addBorder.innerHTML = '';
+// 	PICTURE_LINKS.unshift(PICTURE_LINKS.pop());
+// 	drawImages();
+// })
 
 
+
+
+function drawImages() {
+	PICTURE_LINKS.forEach(picture => {
+		let [link, alt] = picture;
+		let img = document.createElement('img');
+		img.src = link;
+		img.alt = alt;
+		addBorder.appendChild(img);
+	})
+}
+
+drawImages();
 
 //=============================рамка для картинок портфолио========================
 
 
-const addBorder = document.getElementById('photo');
+
 
 
 
@@ -270,3 +260,43 @@ close_btn.addEventListener('click', () => {
 	message_block.classList.add('hidden');
 	document.getElementById('form').reset();
 });
+
+
+
+
+ //================================this is a tasty burger===========================
+
+ const MENU = document.querySelector('.navigation');
+
+ const HAMBURGER = document.querySelector('.hamburger');
+ HAMBURGER.addEventListener('click', (event) => {
+	 const elem = (event.target.classList.contains('hamburger')) ? event.target : event.target.parentNode;
+	 const hamburger_modal = document.createElement('div');
+	 if (elem.classList.contains('hamburger_opened')) {
+		 closeHamburgerMenu();
+	 } else {
+		 elem.classList.add('hamburger_opened');
+		 elem.parentNode.classList.add('menu_opened');
+		 hamburger_modal.classList.add('hamburger_modal');
+		 const hamburger_menu = document.createElement('div');
+		 hamburger_menu.classList.add('hamburger_menu');            
+		 hamburger_menu.appendChild(MENU.cloneNode(true));
+		 hamburger_modal.appendChild(hamburger_menu);
+		 document.getElementById('hamburger').insertAdjacentElement('afterend', hamburger_modal);
+		 document.querySelector('.hamburger_menu ul').addEventListener('click', (event) => {
+			 if (event.target.tagName === "A") {
+				 closeHamburgerMenu();
+			 }
+		 });
+		 document.body.classList.add('overflow-hidden');
+	 }
+ });
+
+ const closeHamburgerMenu = () => {
+	 if ((menu = document.querySelector('.hamburger_opened')) !== null ) {
+		 document.body.classList.remove('overflow-hidden');
+		 menu.classList.remove('hamburger_opened');
+		 menu.parentNode.classList.remove('menu_opened');
+		 document.body.querySelectorAll('.hamburger_modal').forEach(el => el.remove());
+	 }
+ };
